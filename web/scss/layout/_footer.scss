@@ -1,0 +1,164 @@
+footer {
+  position: relative;
+  &::before {
+    @extend .position;
+    background-color: $thirdColor;
+    width: 100%;
+    height: 8px;
+    border-radius: 10px 10px 0px 0px;
+    top: -8px;
+    left: 0;
+    z-index: 2;
+  }
+  .top {
+    .contactInfo {
+      @include max(449) {
+        width: 100%;
+      }
+    }
+    a.brand {
+      width: 160px;
+      @include min(450) {
+        width: 26.1%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include min(768) {
+      padding-top: 24px;
+      padding-bottom: 34px;
+    }
+    @include min(992) {
+      padding-top: 28px;
+      padding-bottom: 38px;
+    }
+    @include min(1200) {
+      padding-top: 30px;
+      padding-bottom: 40px;
+    }
+    @include min(1440) {
+      padding-top: 33px;
+      padding-bottom: 43px;
+    }
+    .d-flex {
+      > picture {
+        width: 50px;
+        @include min(450) {
+          width: 7.6%;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  @include max(449) {
+    .social,
+    .d-flex > picture {
+      margin-top: 10px;
+    }
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @include min(768) {
+      gap: 25px;
+    }
+    @include min(992) {
+      gap: 30px;
+    }
+    @include min(1200) {
+      gap: 35px;
+    }
+    img {
+      height: 15px;
+      width: 15px;
+      object-fit: contain;
+      @include min(450) {
+        height: 13px;
+        width: 13px;
+      }
+      @include min(768) {
+        height: 18px;
+        width: 18px;
+      }
+      @include min(992) {
+        height: 20px;
+        width: 20px;
+      }
+      @include min(1200) {
+        height: 24px;
+        width: 24px;
+      }
+    }
+    a {
+      img {
+        transition: 0.5s ease all;
+      }
+      &:hover {
+        img {
+          filter: brightness(0);
+          transition: 0.5s ease all;
+        }
+      }
+    }
+  }
+  ul#menu-footer {
+    display: flex;
+    gap: 15px;
+
+    @include min(768) {
+      gap: 25px;
+    }
+    @include min(992) {
+      gap: 30px;
+    }
+    @include min(1200) {
+      gap: 40px;
+    }
+    @include min(1440) {
+      gap: 50px;
+    }
+    a {
+      color: $white;
+    }
+  }
+  .bottom {
+    padding: 5px 0px;
+    background-color: $primaryColor;
+    @include min(768){
+      padding: 10px 0px;
+    }
+    @include min(992){
+      padding: 12px 0px;
+    }
+    @include min(1200){
+      padding: 15px 0px;
+    }
+    @include min(1440){
+      padding: 17px 0px;
+    }
+    div {
+      color: $white;
+      @include max(767) {
+        ul {
+          justify-content: center;
+        }
+      }
+    }
+    .d-flex > div {
+      @include max(767) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

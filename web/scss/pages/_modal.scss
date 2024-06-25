@@ -1,0 +1,229 @@
+// ======================Career Popup======================================================
+.careerApply {
+  z-index: 99999999;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  button.btn-close {
+    z-index: 3;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    @include min(768) {
+      right: -30px;
+      top: -10px;
+    }
+    @include min(992) {
+      right: -40px;
+    }
+    @include min(1200) {
+      right: -50px;
+    }
+    @include min(1440) {
+      right: -90px;
+    }
+  }
+  .modal-dialog {
+    max-width: 600px;
+    @include min(768) {
+      max-width: 650px;
+    }
+    @include min(992) {
+      max-width: 859px;
+    }
+    @include min(1200) {
+      max-width: 1000px;
+    }
+    @include min(1440) {
+      max-width: 1150px;
+    }
+    picture {
+      @include min-max(576, 1199) {
+        width: 50%;
+      }
+      @include max(575) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+  .error-message {
+    @include max(767){
+      bottom: -19px;
+    }
+    @include min(768){
+      padding-left: 10px;
+    }
+  }
+}
+.careerPopupBox {
+  > div {
+    padding: 20px;
+    width: 100%;
+    @include max(575) {
+      background: #ffffffc7;
+      z-index: 1;
+    }
+    @include min(576) {
+      width: 50%;
+    }
+    @include min(768) {
+      padding: 20px;
+    }
+    @include min(992) {
+      padding: 30px;
+    }
+    @include min(1200) {
+      width: 60%;
+      padding: 40px 40px;
+    }
+    @include min(1440) {
+      width: 50%;
+      padding: 65px 60px;
+    }
+  }
+  p {
+    color: #231720;
+    font-family: Montserrat;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 18px;
+    margin-bottom: 20px;
+    @include min(768) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    @include min(992) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    @include min(1440) {
+      margin-bottom: 29px;
+    }
+  }
+  .formGroup {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 20px;
+
+    @include min(768) {
+      margin-bottom: 15px;
+    }
+    @include min(992) {
+      margin-bottom: 20px;
+    }
+    @include min(1200) {
+      margin-bottom: 25px;
+    }
+    @include min(1440) {
+      margin-bottom: 30px;
+    }
+    label,
+    input,
+    textarea,
+    select {
+      width: 100%;
+
+      padding-left: 0px;
+    }
+    input,
+    textarea,
+    select {
+      border-radius: 0;
+      border: unset;
+      border-bottom: 1px solid #999;
+      background-color: transparent;
+      // color: $secondaryColor;
+      @include min(992) {
+        font-size: 13px;
+      }
+      @include min(1200) {
+        font-size: 14px;
+      }
+      @include min(1440) {
+        font-size: 19px;
+      }
+      &:focus {
+        outline: unset;
+      }
+      &::placeholder {
+        //   color: $secondaryColor;
+      }
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+    }
+
+    .custom-file-input {
+      position: relative;
+      // overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1px solid #999;
+      cursor: pointer;
+      button,
+      a {
+        min-width: 100px;
+        height: 40px;
+        margin-top: -16px;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        @include min(576) {
+          min-width: 110px;
+          height: 39px;
+          margin-top: -15px;
+        }
+        @include min(768) {
+          min-width: 128px;
+          height: 40px;
+          margin-top: -20px;
+        }
+        @include min(992) {
+          min-width: 148px;
+          height: 50px;
+          margin-top: -30px;
+        }
+      }
+    }
+
+    .custom-file-input input[type="file"] {
+      position: absolute;
+      font-size: 100px;
+      opacity: 0;
+      right: 0;
+      height: 60px;
+      top: -30px;
+      z-index: 9;
+    }
+
+    .custom-file-input label {
+      display: inline-block;
+      z-index: 2;
+      position: relative;
+    }
+  }
+  form {
+    > button {
+      @include min(1200) {
+        position: relative;
+        top: 10px;
+        min-width: 140px;
+      }
+    }
+  }
+  .iti {
+    border-bottom: 1px solid #999;
+    padding-left: 52px;
+    input {
+      border: unset;
+    }
+  }
+}

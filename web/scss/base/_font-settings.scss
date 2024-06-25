@@ -1,0 +1,111 @@
+// Heading Styles
+h1{
+  // font-weight: 700;
+}
+h1,
+h2,
+h3,.h3,
+h4,
+h5,
+h6 {
+  // font-weight: 400;
+  // font-family: 'Montserrat', sans-serif;
+
+}
+h1,h2{
+  // font-family: 'Montserrat', sans-serif;
+
+}
+h1 {
+font-size:23px;
+  @include min(321) {
+   font-size: 32px
+  }
+  @include min(768) {
+   font-size: 40px
+  }
+  @include min(1200) {
+    font-size: 56px
+  }
+  // @include min(1300) {
+  @include min(1440) {
+font-size: 50px
+  }
+  // @include min(1300) {
+  //   @include fontSize(60px);
+  // }
+  // @include min(1600) {
+  //   @include fontSize(60px);
+  // }
+  // @include min(1700) {
+  //   @include fontSize(70px);
+  // }
+  // @include min(1800) {
+  //   @include fontSize(80px);
+  // }
+
+}
+h2 {
+  font-weight: 700;
+font-size: 20px;
+  line-height: 40px; 
+  @include min(768) {
+    font-size: 35px;
+    line-height: 55px; 
+  }
+  @include min(1200) {
+    font-size: 38px;
+    line-height:58px; 
+  }
+  @include min(1440) {
+   font-size: 40px;
+    line-height:60px; 
+  }
+  @include min(1600) {
+   font-size: 55px;
+    line-height:75px; 
+  }
+  @include min(1900) {
+   font-size: 60px;
+    line-height:80px; 
+  }
+
+}
+h3,.h3 {
+  font-weight: 400;
+
+  font-size: 14px;
+  @include min(768) {
+    font-size: 15px;
+  }
+  @include min(1200) {
+    font-size: 18px;
+  }
+
+  @include min(1440) {
+    font-size: 20px;
+  }
+  line-height: normal;
+
+}
+h4,.h4 {
+  font-weight: 400;
+
+  font-size: 13px;
+  @include min(768) {
+    font-size: 13px;
+  }
+  @include min(1200) {
+    font-size: 14px;
+  }
+  @include min(1300) {
+    font-size: 16px;
+
+  }
+  @include min(1440) {
+    font-size: 18px;
+  }
+  line-height: normal;
+
+}
+

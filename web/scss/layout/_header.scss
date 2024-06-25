@@ -1,0 +1,348 @@
+a.navbar-toggler {
+  @include min(992) {
+    display: none;
+  }
+}
+
+header {
+  transition: 0.5s ease all;
+  .brand {
+    width: 150px;
+
+    @include min(992) {
+      width: 175px;
+    }
+
+    @include min(1200) {
+      width: 195px;
+    }
+
+    @include min(1440) {
+      width: 217px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  transition: 0.6s ease all;
+  background: $white;
+  z-index: 9;
+  // top: 0;
+  // position: fixed;
+  width: 100%;
+  padding: 10px 0px;
+  position: relative;
+
+  @include min(992) {
+    padding: 15px 0px;
+  }
+  @include min(1200) {
+    padding: 18px 0px;
+  }
+  @include min(1440) {
+    padding: 20px 0px;
+  }
+
+  &::after {
+    @extend .position;
+    background-color: $thirdColor;
+    width: 100%;
+    height: 8px;
+    border-radius: 0px 0px 10px 10px;
+    bottom: -8px;
+    left: 0;
+  }
+
+  a {
+    color: $primaryColor;
+    font-size: 18px;
+    line-height: 23px;
+
+    @include min(992) {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    @include min(1280) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    @include min(1440) {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    &.drop-downs {
+      position: relative;
+      padding-right: 15px;
+
+      &::after {
+        @extend .position;
+        width: 10px;
+        height: 5px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9.942" height="4.971" viewBox="0 0 9.942 4.971"><path id="Icon_ionic-md-arrow-dropdown" data-name="Icon ionic-md-arrow-dropdown" d="M9,13.5l4.971,4.971L18.942,13.5Z" transform="translate(-9 -13.5)" fill="%23024059"/></svg>');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  nav {
+    a {
+      position: relative;
+
+      &::before {
+        @extend .position;
+      }
+
+      @include min(992) {
+        &::before {
+          width: 0;
+          height: 2px;
+          background-color: $secondaryColor;
+          transition: 0.5s ease all;
+          bottom: -5px;
+          left: 0;
+        }
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+          transition: 0.5s ease all;
+        }
+      }
+    }
+    .current_page_item a {
+      &:before {
+        width: 100%;
+        transition: 0.5s ease all;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    @include min(992) {
+      gap: 18px;
+    }
+
+    @include min(1280) {
+      gap: 35px;
+    }
+
+    @include min(1440) {
+      gap: 43px;
+    }
+  }
+  .menu-main-menu-container {
+    display: flex;
+    align-items: center;
+
+    @include min(992) {
+      > ul {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        > li {
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
+      }
+      height: 100px;
+    }
+  }
+  .menu-item-has-children {
+    position: relative;
+    position: relative;
+    padding-right: 15px;
+
+    &::after {
+      @extend .position;
+      width: 10px;
+      height: 5px;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9.942" height="4.971" viewBox="0 0 9.942 4.971"><path id="Icon_ionic-md-arrow-dropdown" data-name="Icon ionic-md-arrow-dropdown" d="M9,13.5l4.971,4.971L18.942,13.5Z" transform="translate(-9 -13.5)" fill="%23024059"/></svg>');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .sub-menu {
+      a {
+        display: block;
+        width: 100%;
+      }
+      position: absolute;
+      z-index: 310;
+      width: fit-content;
+      gap: 10px;
+      top: 80px;
+      width: fit-content;
+      display: none;
+      flex-wrap: wrap;
+      background-color: $white;
+      min-width: 250px;
+      padding: 20px;
+      z-index: 2;
+      border-radius: 30px;
+      li {
+        width: 100%;
+        border-bottom: 1px solid $greycolor;
+        padding-bottom: 5px;
+        &:last-child {
+          padding: 0;
+          border: un;
+        }
+      }
+
+      ul {
+        // overflow: hidden;
+        display: flex;
+
+        border-radius: 10px;
+        background-color: $white;
+        box-shadow: 0px 3px 2px #0000002e;
+        border: 1px solid #ececec;
+
+        li {
+          a {
+            padding: 12px 10px;
+
+            @include min(1200) {
+              padding: 14px 12px;
+            }
+            @include min(1350) {
+              padding: 16px 14px;
+            }
+            @include min(1600) {
+              padding: 18px 16px;
+            }
+            @include min(1900) {
+              padding: 20px 18px;
+            }
+          }
+          &:last-child {
+            border-bottom: unset;
+          }
+        }
+      }
+    }
+    &:hover {
+      .sub-menu {
+        display: flex;
+      }
+    }
+  }
+
+  &.scrolled {
+    position: fixed;
+    top: 0;
+    padding: 5px 0px;
+    transition: 0.5s ease all;
+  }
+}
+
+// .mobDropDown {
+//   position: relative;
+
+//   button {
+//     background-color: $primaryColor;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     width: 27px;
+//     height: 27px;
+//     border-radius: 5px;
+//   }
+
+//   .dropdown-menu {
+//     position: unset !important;
+//     transform: translate(0) !important;
+//     border: unset;
+//     padding-left: 25px;
+//     background: unset;
+
+//     li {
+//       margin-bottom: 10px;
+//     }
+//   }
+// }
+
+// .mobile_left_menu {
+//   z-index: 99999999;
+
+//   nav > ul {
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: column;
+//     gap: 10px;
+
+//     a {
+//       font-size: 16px;
+//     }
+//   }
+// }
+
+@include max(991) {
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-item {
+    position: relative;
+  }
+
+  .menu-item a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Sub-menu styling */
+  .sub-menu {
+    display: none; /* Hide sub-menus by default */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #f9f9f9;
+  }
+
+  .sub-menu .menu-item a {
+    padding-left: 30px; /* Indent sub-menu items */
+  }
+
+  /* Sub-menu toggle button */
+  .sub-menu-toggle {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease all;
+    &.active {
+      transform: rotate(180deg);
+      transition: 0.5s ease all;
+    }
+  }
+}

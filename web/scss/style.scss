@@ -1,0 +1,30 @@
+// Helpers
+@import "../scss/helpers/variables";
+@import "../scss/helpers/media-queries";
+@import "../scss/helpers/mixins";
+@import "../scss/helpers/font-kit";
+
+// Components
+@import "../scss/components/animations";
+@import "../scss/components/custom-cursor";
+@import "../scss/components/floatingbutton";
+@import "../scss/components/star-rating-svg";
+@import "../scss/components/animations";
+
+// Base 
+@import "../scss/base/buttons";
+// @import "../scss/base/font-settings";
+@import "../scss/base/forms";
+@import "../scss/base/list-styles";
+
+//Layout
+@import "../scss/layout/reset";
+@import "../scss/layout/header";
+@import "../scss/layout/footer";
+@import "../scss/layout/offcanvas-menu";
+
+//pages
+
+@import "../scss/pages/style";
+@import "../scss/pages/modal";
+@import "../scss/pages/home";

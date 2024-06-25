@@ -1,0 +1,684 @@
+.bannerText {
+  width: 100%;
+  margin-right: auto;
+  z-index: 2;
+  @include min(637) {
+    width: 55.3%;
+  }
+  @include min(768) {
+    width: 45.3%;
+  }
+  @include min(1600) {
+    width: 40.3%;
+  }
+  @include min(1900) {
+    width: 509px;
+  }
+}
+.banner-box-slider {
+  z-index: 2;
+  margin-top: 10px;
+
+  @include max(767) {
+    gap: 10px;
+  }
+
+  @include min(992) {
+    margin-top: 30px;
+  }
+  @include min(1440) {
+    margin-top: 40px;
+  }
+}
+.banner {
+  overflow: hidden;
+  background-color: $greycolor;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  &::after {
+    @extend .position;
+
+    @include max(991) {
+      background-color: $white;
+      opacity: 0.8;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  }
+
+  @include min(576) {
+    padding-top: 18px;
+    padding-bottom: 24px;
+  }
+
+  @include min(768) {
+    padding-top: 18px;
+    padding-bottom: 40px;
+  }
+
+  @include min(992) {
+    padding-top: 18px;
+    padding-bottom: 55px;
+  }
+
+  @include min(1200) {
+    padding-top: 21px;
+    padding-bottom: 84px;
+  }
+
+  @include min(1440) {
+    padding-bottom: 104px;
+  }
+
+  h1 {
+    color: $thirdColor;
+    margin-bottom: 5px;
+
+    @include min(1200) {
+      margin-bottom: 8px;
+    }
+
+    @include min(1440) {
+      margin-bottom: 13px;
+    }
+
+    + p {
+      margin-bottom: 18px;
+
+      @include min(992) {
+        margin-bottom: 20px;
+      }
+
+      @include min(1200) {
+        width: 99%;
+        margin-bottom: 31px;
+      }
+    }
+  }
+
+  .accrid {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include min(768) {
+      gap: 18px;
+    }
+
+    @include min(1200) {
+      gap: 21px;
+    }
+
+    p {
+      width: 78%;
+
+      @include min(768) {
+        width: 78%;
+      }
+
+      @include min(1200) {
+        width: 48%;
+      }
+      @include min(1600) {
+        width: 250px;
+      }
+    }
+  }
+
+  .bannerImage {
+    position: absolute;
+    bottom: 0;
+    right: -67px;
+    z-index: 0;
+    width: 100%;
+    margin-left: auto;
+    @include min(481) {
+      width: 64.03%;
+    }
+    @include min(637) {
+      width: 50%;
+    }
+    @include min(768) {
+      width: 54.03%;
+    }
+    @include min(992) {
+      width: 44.03%;
+    }
+    @include min(1600) {
+      width: 49.03%;
+    }
+    @include min(1900) {
+      width: 39.03%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.banner-box-slider {
+  .slick-list {
+    margin: 0px -10px;
+  }
+}
+.banner-box {
+  z-index: 2;
+  text-align: center;
+  background: #fff;
+
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease all;
+  @include max(636) {
+    border: 1px solid $greycolor;
+    margin: 10px;
+    .btn {
+      margin: auto;
+    }
+  }
+  @include min(637) {
+    display: flex;
+  }
+  &:hover {
+    box-shadow: 5px 5px 7px 2px rgb(0 0 0 / 7%);
+    transition: 0.5s ease all;
+  }
+
+  border-radius: 20px;
+  width: 100%;
+  padding: 25px 15px 25px 15px;
+
+  @include min(630) {
+    width: 31.6%;
+  }
+
+  @include min(768) {
+    padding: 30px 20px 30px 20px;
+  }
+
+  @include min(992) {
+    border-radius: 30px;
+
+    padding: 35px 25px 40px 35px;
+  }
+
+  @include min(1200) {
+    padding: 48px 35px 42px 35px;
+  }
+
+  @include min(1440) {
+    padding: 53px 43px 62px 43px;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 16px;
+
+    @include min(576) {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 20px;
+    }
+
+    @include min(992) {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 24px;
+    }
+
+    @include min(1200) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 28px;
+    }
+
+    @include min(1440) {
+      font-size: 21.33px;
+      line-height: 26px;
+      margin-bottom: 33px;
+    }
+  }
+}
+
+// ==================================Section Academy =====================================
+.academy {
+  background-color: $primaryColor;
+
+  padding-top: 30px;
+  padding-bottom: 37px;
+  @extend .sectionBorder;
+  @include min(768) {
+    padding-top: 68px;
+    padding-bottom: 104px;
+  }
+
+  .contentArea {
+    position: relative;
+    text-align: center;
+
+    h2 {
+      color: $thirdColor4;
+
+      margin-left: auto;
+      margin-right: auto;
+      @include min(992) {
+        width: 58%;
+      }
+    }
+
+    p,
+    span {
+      color: $white;
+      width: 78.7%;
+      margin: auto;
+
+      @include min(768) {
+        width: 48.7%;
+      }
+      @include min(1600) {
+        width: 570px;
+      }
+    }
+  }
+}
+
+.accdamyWrapper {
+  position: relative;
+
+  .videoMask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $thirdColor4;
+    border-radius: 30px;
+    height: 180px;
+    width: 85%;
+    margin: auto;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    @include min(481) {
+      height: 250px;
+    }
+
+    @include min(768) {
+      width: 65.8%;
+      margin-top: 56px;
+      margin-bottom: 63px;
+      height: 280px;
+    }
+
+    @include min(992) {
+      margin-top: 60px;
+      margin-bottom: 67px;
+      height: 350px;
+    }
+
+    @include min(1200) {
+      margin-top: 64px;
+      margin-bottom: 71px;
+      height: 380px;
+    }
+
+    @include min(1440) {
+      margin-top: 68px;
+      margin-bottom: 75px;
+      height: 423px;
+    }
+    @include min(1600) {
+      height: 473px;
+
+      width: 780px;
+    }
+  }
+
+  .playBtn {
+    img {
+      transform: scale(1);
+      transition: 0.5s ease all;
+      width: 50px;
+      height: auto;
+      object-fit: cover;
+
+      @include min(768) {
+        width: 80px;
+      }
+
+      @include min(992) {
+        width: 90px;
+      }
+
+      @include min(1200) {
+        width: 100px;
+      }
+
+      @include min(1440) {
+        width: 114px;
+      }
+    }
+
+    &:hover {
+      img {
+        transition: 0.5s ease all;
+        transform: scale(1.2);
+        filter: invert(1);
+      }
+    }
+  }
+
+  &::before {
+    @extend .position;
+    width: 100%;
+    top: 50%;
+    background-repeat: repeat;
+    transform: translateY(-50%);
+    background-image: url(../images/vecor.png);
+    z-index: -1;
+    background-size: cover;
+    background-position: center center;
+    left: 0;
+    height: 67.87%;
+  }
+}
+
+.academy {
+  .logoSliderTwo,
+  .logoSlider {
+    padding-bottom: 20px;
+
+    img {
+      height: auto;
+    }
+    .slick-list {
+      margin: 0px -5.5px;
+    }
+
+    .slick-slide {
+      margin: 0px 5.5px;
+    }
+
+    @include min(768) {
+      padding-bottom: 30px;
+      .slick-list {
+        margin: 0px -15.5px;
+      }
+
+      .slick-slide {
+        margin: 0px 15.5px;
+      }
+    }
+
+    @include min(992) {
+      padding-bottom: 50px;
+      .slick-list {
+        margin: 0px -20.5px;
+      }
+
+      .slick-slide {
+        margin: 0px 20.5px;
+      }
+    }
+
+    @include min(1200) {
+      padding-bottom: 63px;
+
+      .slick-list {
+        margin: 0px -28.5px;
+      }
+
+      .slick-slide {
+        margin: 0px 28.5px;
+      }
+    }
+  }
+  .logoSliderTwo {
+    margin-top: 40px;
+    @include min(992){
+      margin-top: 70px;
+    }
+    picture {
+      background-color: $white;
+      border-radius: 20px;
+      padding: 25px 10px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// ===========================Service Section===========================================
+.services {
+  background-color: $greycolor;
+  @extend .sectionBorder;
+
+  padding: 50px 0px;
+
+  @include min(992) {
+    padding: 117px 0px;
+  }
+
+  .d-flex {
+    gap: 40px 0px;
+  }
+
+  article {
+    @include min(576) {
+      width: 48%;
+    }
+    @include min(992) {
+      width: 31.589%;
+    }
+    &:first-child {
+      p {
+        width: 77.38%;
+        @include min(1600) {
+          width: 273px;
+        }
+      }
+    }
+    img {
+      height: auto;
+      border-radius: 30px;
+      width: 100%;
+      transition: 0.8s ease all;
+    }
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    picture {
+      border-radius: 30px;
+
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+  }
+
+  h2,
+  h3 {
+    color: $thirdColor4;
+  }
+
+  h3 {
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  .btn {
+    margin-top: 30px;
+  }
+}
+
+// ====================================News Section =============================
+.academy.proud-work {
+  .contentArea {
+    h2 {
+      color: $thirdColor;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+    @include min(768) {
+      font-size: 25px;
+      line-height: 35px;
+    }
+    @include min(992) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @include min(1200) {
+      font-size: 35px;
+      line-height: 48px;
+    }
+    @include min(1440) {
+      font-size: 37.9px;
+      line-height: 51px;
+    }
+  }
+}
+.news {
+  margin-bottom: 30px;
+
+  p,
+  h3 {
+    color: $white;
+  }
+}
+.slick-nav {
+  width: 90px;
+  @include min(768) {
+    width: 145px;
+  }
+  @include min(992) {
+    width: 155px;
+  }
+  @include min(1200) {
+    width: 160px;
+  }
+  @include min(1440) {
+    width: 167px;
+  }
+}
+.newsSlider {
+  width: 100%;
+  margin: auto;
+  picture {
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .slick-slide {
+    margin: 0px 10px;
+  }
+}
+.newsSliderItem {
+  @include max(767) {
+    height: 190px;
+    img {
+      object-fit: cover;
+    }
+    img,
+    picture {
+      height: 100%;
+    }
+  }
+  position: relative;
+  p,
+  h3 {
+    color: $white;
+  }
+}
+.newsInfo {
+  border-radius: 30px;
+
+  background: linear-gradient(0deg, black, transparent);
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  @include min(768) {
+    padding: 24px 48px;
+  }
+  @include min(992) {
+    padding: 28px 58px;
+  }
+  @include min(1200) {
+    padding: 30px 62px;
+  }
+  @include min(1440) {
+    padding: 33px 67px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+}
+.multibox {
+  margin-top: 30px;
+  @include min(768) {
+    margin-top: 70px;
+  }
+  @include min(992) {
+    margin-top: 80px;
+  }
+  @include min(1200) {
+    margin-top: 100px;
+  }
+  @include min(1440) {
+    margin-top: 110px;
+  }
+  .banner-box {
+    border: unset !important;
+    &:nth-child(1) {
+      background-color: $thirdColor4;
+    }
+    &:nth-child(2) {
+      background-color: $secondaryColor;
+    }
+    &:nth-child(3) {
+      background-color: $thirdColor;
+    }
+    &:nth-child(4) {
+      background-color: $thirdColor4;
+    }
+    &:nth-child(5) {
+      background-color: $secondaryColor;
+    }
+    &:nth-child(6) {
+      background-color: $thirdColor;
+    }
+    &:nth-child(7) {
+      background-color: $thirdColor4;
+    }
+    &:nth-child(8) {
+      background-color: $secondaryColor;
+    }
+    &:nth-child(9) {
+      background-color: $thirdColor;
+    }
+  }
+  p {
+    color: $white;
+  }
+}
